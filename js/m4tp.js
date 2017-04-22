@@ -3,7 +3,8 @@ var app = angular.module("m4tp", ["ngRoute", "ui.bootstrap"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "views/home.html"
+        templateUrl : "views/home.html",
+        controller : "mapDemoCtrl"
     })
     .when("/about", {
         templateUrl : "views/public/about.html"
