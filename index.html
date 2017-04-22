@@ -16,6 +16,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angular.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
     <script src="js/angular-route.min.js"></script>
 
     <script src="js/d3.min.js"></script>
@@ -45,7 +46,7 @@
               <ul class="nav navbar-nav">
                 <li><a href="#/about">About</a></li>
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="serv_dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+                  <a class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="#/water">Water Quality</a></li>
                     <li><a href="#/biodiversity">Biodiversity</a></li>
@@ -90,7 +91,9 @@
     </div>
 
 
-
+<div>
+  <img src="images/banner_paper.png" class="img-responsive" />
+</div>
 <div ng-view class="container" style="margin: 90px 50px 0px 50px">
 
 </div>

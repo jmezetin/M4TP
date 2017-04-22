@@ -1,5 +1,5 @@
 
-var app = angular.module("m4tp", ["ngRoute"]);
+var app = angular.module("m4tp", ["ngRoute", "ui.bootstrap"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
