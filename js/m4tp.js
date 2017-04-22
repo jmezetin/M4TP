@@ -26,10 +26,126 @@ app.config(function($routeProvider) {
     .when("/research", {
         templateUrl : "views/research/home.html"
     })    
-    .when("/faqs", {
-        templateUrl : "views/faqs.html"
+    .when("/maps", {
+        templateUrl : "views/public/mapDemo1.html",
+        controller : "mapDemoCtrl"
+
+    })
+        .when("/water", {
+        templateUrl : "views/services/water_quality.html",
+        controller : "mapDemoCtrl"
+
+    })
+    .otherwise({
+        template : "views/home.html"
     });
 });
+
+app.controller("mapDemoCtrl", function ($scope) {
+    $scope.msg = "I love London";
+
+$scope.pie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+			"text": "Natural Capital",
+			"fontSize": 24,
+			"font": "open sans"
+		},
+		"subtitle": {
+			"text": "A list of Ecosystem Services",
+			"color": "#999999",
+			"fontSize": 12,
+			"font": "open sans"
+		},
+		"location": "top-left",
+		"titleSubtitlePadding": 9
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"canvasWidth": 590,
+		"pieOuterRadius": "99%"
+	},
+	"data": {
+		"sortOrder": "value-desc",
+		"content": [
+			{
+				"label": "Biodiversity",
+				"value": 20,
+				"color": "#0066cc"
+			},
+			{
+				"label": "Water Quality",
+				"value": 20,
+				"color": "#003366"
+			},
+			{
+				"label": "Air",
+				"value": 20,
+				"color": "#336600"
+			},
+			{
+				"label": "Cultural Services",
+				"value": 20,
+				"color": "#669966"
+			},
+			{
+				"label": "Pollination",
+				"value": 20,
+				"color": "#990000"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"format": "none",
+			"pieDistance": 32
+		},
+		"inner": {
+			"format": "label"
+		},
+		"mainLabel": {
+			"color": "#ffffff",
+			"fontSize": 18
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 24
+		},
+		"lines": {
+			"enabled": true,
+			"style": "straight"
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		}
+	},
+	"callbacks": {}
+});
+
+});
+
 
 /*
 $(document).ready(function(){
