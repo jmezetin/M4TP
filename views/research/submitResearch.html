@@ -1,20 +1,62 @@
 
 
 <div class="container">
-  <h2>Form control: textarea</h2>
-  <p>The form below contains a textarea for comments:</p>
-  <form style="background-color: lightgray">
+  <h3>Have you recently published new research?</h3>
+  <p>Use the form below to categorize and share your findings with the greater community.</p>
+  <div class="well">
+    <form >
+      <div class="form-group">
+        <label for="InputName">Your Name</label>
+        <div class="input-group">
+          <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>
+      </div>
+      <div class="form-group">
+        <label for="InputEmail">Your Email</label>
+        <div class="input-group">
+          <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required  >
+          <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>
+      </div>
+      <div class="form-group">
+        <label for="InputMessage">Message</label>
+        <div class="input-group"
+>
+          <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>
+      </div>
     <div class="form-group">
-      <label for="comment">Comment:</label>
-      <textarea class="form-control" rows="5" id="comment"></textarea>
-    </div>
-        <div class="form-group">
-      <label for="comment">Comment:</label>
-      <textarea class="form-control" rows="5" id="comment"></textarea>
+      <label for="link">Link to Research/Website:</label>
+      <input class="form-control" id="link" type="text"></input>
     </div>
     <div class="form-group">
-      <label for="comment">Description:</label>
+      <label for="location">Location:</label>
+      <textarea class="form-control" rows="5" id="location"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
       <textarea class="form-control" rows="5" id="description"></textarea>
     </div>
+
+    <div class="form-group">
+      <label for="value">Value:</label>
+      <span> What is the main takeaway for the people? </span>
+      <textarea class="form-control" rows="5" id="value"></textarea>
+    </div>
+
+  <div class="form-group">
+      <h4>Relevant Ecosystem Services </h4>
+      <span style="padding-left: 50px">
+      <label class="checkbox-inline">
+        <input type="checkbox" value="">Air Pollution
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="">Water Quality
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="">Bio-Diversity
+      </label>
+      </span>
+  </div>
   </form>
+  </div>
 </div>
