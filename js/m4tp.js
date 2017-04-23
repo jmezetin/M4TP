@@ -32,8 +32,19 @@ app.config(function($routeProvider) {
         controller : "mapDemoCtrl"
 
     })
-        .when("/water", {
-        templateUrl : "views/services/water_quality.html",
+	  .when("/water", {
+        templateUrl : "views/services/water_quality_va.html",
+        controller : "mapDemoCtrl"
+
+    })
+        .when("/water-oh", {
+        templateUrl : "views/services/water_quality_oh.html",
+        controller : "mapDemoCtrl"
+
+    })
+
+        .when("/water-va", {
+        templateUrl : "views/services/water_quality_va.html",
         controller : "mapDemoCtrl"
 
     })
