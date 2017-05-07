@@ -48,6 +48,12 @@ app.config(function($routeProvider) {
         controller : "mapDemoCtrl"
 
     })
+
+	.when("/users", {
+        templateUrl : "views/public/users.html",
+        controller : "mapDemoCtrl"
+
+    })
     .otherwise({
         template : "views/home.html"
     });
